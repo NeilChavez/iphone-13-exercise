@@ -1,0 +1,152 @@
+/* Reset Paul Irish */
+html {
+    box-sizing: border-box;
+  }
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+  }
+
+/* Variabili */
+  :root{
+      --prime-color: rgb(0,0,0);
+      --character-color: rgb(160, 160, 160);
+      --gray-border: rgb(60, 60, 50);
+      --hover-background: rgb(160, 160, 160);
+      --hover-color: rgb(0,0,0);
+      --title-color: rgb(0,0,0);
+      font-family: sans-serif;
+  }
+
+  /* Stili generali */
+  body{
+      color: var(--character-color);
+      margin: 0;
+  }
+
+
+  li{
+      list-style-type: none;
+  }
+
+  a{
+      color: var(--character-color);
+      text-decoration: none;
+  }
+
+  /* Header */
+
+  .header{
+      background-color: var(--prime-color);
+  }
+
+  .logo{
+      max-height: 4rem;
+      border-bottom: thin solid var(--gray-border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--character-color);
+      cursor: pointer;
+   
+  }
+
+  .logo i{
+      font-size: 1.4rem;
+  }
+  .nav-list{
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+
+  .list-item{
+      padding: 0.8rem 0;
+      border-bottom: thin solid var(--gray-border);
+      cursor: pointer;
+      white-space: nowrap;
+  }
+  .link-item{
+    padding-left: 2rem;
+  }
+
+  .list-item:hover,
+  .list-item:hover .link-item{
+      background-color: var(--hover-background);
+      color: var(--hover-color);
+  }
+
+  /* Hero */
+
+  .hero{
+      background-image: url(./images/iphone-13-hero.jpeg);
+      background-position: 15% center;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+  }
+  .title{
+      color: rgb(0,0,0);
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.2rem;
+  }
+
+  /* Media Query */
+
+@media screen and (min-width: 576px) { 
+    .nav-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .list-item{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+ }
+
+ @media screen and (min-width: 768px) {
+
+    .list-item{
+        flex-basis: 33.333333%;
+    }
+  }
+
+
+  @media screen and (min-width: 992px) { 
+
+    .header{
+        display: flex;
+    }
+      .list-item{
+          flex-basis: 10%;
+            flex-shrink: 1;
+      }
+      .nav-list{
+        flex-wrap: nowrap;
+      }
+      .nav{
+          width: 100%;
+          padding: 0;
+      }
+      .list-item{
+          border-bottom: none;
+      }
+      .logo{
+          padding: 0rem;
+          width: 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+     
+      .title{
+        font-size: 2.7rem;
+      }
+   } 
+
